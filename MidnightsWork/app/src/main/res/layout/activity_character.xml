@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+	android:id="@+id/rootLayout"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<TextView
+			android:id="@+id/back"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentStart="true"
+			android:layout_alignParentTop="true"
+			android:layout_marginStart="24dp"
+			android:layout_marginTop="32dp"
+			android:gravity="center"
+			android:text="@string/back"
+			android:textColor="@color/colorBlack"
+			app:drawableStartCompat="@drawable/ic_arrow_back" />
+
+		<TextView
+			android:id="@+id/characterName"
+			style="@style/FontBold32Black"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentStart="true"
+			android:layout_alignParentTop="true"
+			android:layout_marginStart="24dp"
+			android:layout_marginTop="64dp" />
+
+		<LinearLayout
+			android:id="@+id/characterLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/characterName"
+			android:layout_margin="24dp"
+			android:orientation="horizontal"
+			android:weightSum="10">
+
+			<androidx.cardview.widget.CardView
+				android:layout_width="0dp"
+				android:layout_height="160dp"
+				android:layout_weight="4.5"
+				app:cardCornerRadius="10dp">
+
+				<ImageView
+					android:id="@+id/characterImage"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent" />
+			</androidx.cardview.widget.CardView>
+
+			<androidx.constraintlayout.widget.ConstraintLayout
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="5.5">
+
+				<TextView
+					android:id="@+id/lastKnownLocationStatic"
+					style="@style/Font16Orange"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="8dp"
+					android:layout_marginTop="8dp"
+					android:text="@string/last_known_location"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+
+				<TextView
+					android:id="@+id/lastKnownLocation"
+					style="@style/Font12Grey"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="8dp"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@id/lastKnownLocationStatic" />
+
+				<TextView
+					android:id="@+id/firstSeenIn"
+					style="@style/Font16Orange"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="8dp"
+					android:layout_marginTop="8dp"
+					android:text="@string/first_seen_in"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@id/lastKnownLocation" />
+
+				<TextView
+					android:id="@+id/firstEpisode"
+					style="@style/Font12Grey"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="8dp"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@id/firstSeenIn" />
+
+				<TextView
+					android:id="@+id/status"
+					style="@style/Font16Orange"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="8dp"
+					android:layout_marginTop="8dp"
+					android:text="@string/status"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@id/firstEpisode" />
+
+				<ImageView
+					android:id="@+id/imageStatus"
+					android:layout_width="12dp"
+					android:layout_height="12dp"
+					android:layout_marginStart="8dp"
+					app:layout_constraintBottom_toBottomOf="@id/characterStatus"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="@id/characterStatus" />
+
+				<TextView
+					android:id="@+id/characterStatus"
+					style="@style/Font12Grey"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="4dp"
+					app:layout_constraintStart_toEndOf="@id/imageStatus"
+					app:layout_constraintTop_toBottomOf="@id/status" />
+
+			</androidx.constraintlayout.widget.ConstraintLayout>
+
+		</LinearLayout>
+
+		<TextView
+			android:id="@+id/alsoFrom"
+			style="@style/FontBold20Black"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/characterLayout"
+			android:layout_marginStart="24dp"
+			android:layout_marginEnd="24dp"
+			android:text="@string/also_from" />
+
+		<androidx.recyclerview.widget.RecyclerView
+			android:id="@+id/recycler"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_above="@id/bottomView"
+			android:layout_below="@id/alsoFrom" />
+
+		<View
+			android:id="@+id/bottomView"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_alignParentBottom="true" />
+
+	</RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

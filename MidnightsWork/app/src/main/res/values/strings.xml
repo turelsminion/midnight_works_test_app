@@ -1,0 +1,18 @@
+<resources>
+	<string name="app_name">Midnight Works Test App</string>
+	<string name="shared_prefs">test_app_prefs</string>
+	
+	<string name="rick_and_morty">Rick and Morty</string>
+	<string name="no_internet">Internet connection appears to be offline.\nPlease check your network settings.</string>
+	<string name="server_message_error">Something went wrong. Please try again later.</string>
+	<string name="server_error">Server unavailable. Please try again later.</string>
+	<string name="retry">Retry</string>
+	<string name="episode">Episode:</string>
+	<string name="back">Back</string>
+	<string name="last_known_location">Last known location:</string>
+	<string name="first_seen_in">First seen in:</string>
+	<string name="status">Status:</string>
+	<string name="also_from">Also from \"%1$s\"</string>
+	<string name="cache_images_name_format">%1$d.%2$s</string>
+
+</resources>

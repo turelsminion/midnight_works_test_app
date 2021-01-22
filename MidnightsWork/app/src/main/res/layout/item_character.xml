@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/rootLayout"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginStart="16dp"
+	android:layout_marginTop="16dp"
+	android:layout_marginEnd="16dp"
+	android:layout_marginBottom="8dp"
+	android:elevation="5dp"
+	app:cardCornerRadius="10dp">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<ImageView
+			android:id="@+id/characterImage"
+			android:layout_width="128dp"
+			android:layout_height="128dp"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintStart_toEndOf="@id/characterImage"
+			app:layout_constraintTop_toTopOf="parent">
+
+			<TextView
+				android:id="@+id/characterName"
+				style="@style/FontBold18Orange"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="8dp"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+
+			<TextView
+				android:id="@+id/characterLocation"
+				style="@style/Font12Grey"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				app:layout_constraintStart_toStartOf="@id/characterName"
+				app:layout_constraintTop_toBottomOf="@id/characterName" />
+
+			<TextView
+				android:id="@+id/episode"
+				style="@style/Font12Grey"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:text="@string/episode"
+				app:layout_constraintStart_toStartOf="@id/characterLocation"
+				app:layout_constraintTop_toBottomOf="@id/characterLocation" />
+
+			<TextView
+				android:id="@+id/characterEpisode"
+				style="@style/Font10Grey"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="6dp"
+				app:layout_constraintStart_toStartOf="@id/episode"
+				app:layout_constraintTop_toBottomOf="@id/episode" />
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

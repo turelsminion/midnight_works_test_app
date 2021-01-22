@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<style name="AppTheme.NoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar">
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorBlack</item>
+		<item name="colorAccent">@color/colorAccent</item>
+		<item name="colorControlActivated">@color/colorPrimary</item>
+		<item name="windowActionBar">false</item>
+		<item name="windowNoTitle">true</item>
+	</style>
+
+	<style name="FontBold32Black">
+		<item name="android:textStyle">bold</item>
+		<item name="android:textSize">32sp</item>
+		<item name="android:textColor">@color/colorBlack</item>
+	</style>
+
+	<style name="FontBold20Black">
+		<item name="android:textStyle">bold</item>
+		<item name="android:textSize">20sp</item>
+		<item name="android:textColor">@color/colorBlack</item>
+	</style>
+
+	<style name="FontBold20Orange">
+		<item name="android:textStyle">bold</item>
+		<item name="android:textSize">20sp</item>
+		<item name="android:textColor">@color/colorOrange</item>
+	</style>
+
+	<style name="FontBold18Orange">
+		<item name="android:textStyle">bold</item>
+		<item name="android:textSize">18sp</item>
+		<item name="android:textColor">@color/colorOrange</item>
+	</style>
+
+	<style name="Font16Orange">
+		<item name="android:textSize">16sp</item>
+		<item name="android:textColor">@color/colorOrange</item>
+	</style>
+
+	<style name="Font12Grey">
+		<item name="android:textSize">12sp</item>
+		<item name="android:textColor">@color/colorGrey</item>
+	</style>
+
+	<style name="Font10Grey">
+		<item name="android:textSize">10sp</item>
+		<item name="android:textColor">@color/colorGrey</item>
+	</style>
+
+</resources>

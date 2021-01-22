@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/rootLayout"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+		android:id="@+id/refresh"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<TextView
+				android:id="@+id/rickAndMortyText"
+				style="@style/FontBold32Black"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_alignParentStart="true"
+				android:layout_alignParentTop="true"
+				android:layout_marginStart="24dp"
+				android:layout_marginTop="64dp"
+				android:text="@string/rick_and_morty" />
+
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/recycler"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_above="@id/bottomView"
+				android:layout_below="@id/rickAndMortyText"/>
+
+			<View
+				android:id="@+id/bottomView"
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_alignParentBottom="true" />
+
+		</RelativeLayout>
+
+	</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
